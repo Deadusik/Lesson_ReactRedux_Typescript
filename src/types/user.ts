@@ -5,7 +5,7 @@ export enum UserActionTypes {
 }
 
 export interface IUserState {
-    users: any[],
+    users: Array<any>,
     isLoading: boolean,
     error: null | string
 }
@@ -16,7 +16,7 @@ interface IFetchUsersAction {
 
 interface IFetchUsersSuccessAction {
     type: UserActionTypes.FETCH_USERS_SUCCESS
-    payload: any[]
+    payload: []
 }
 
 interface IFetchUsersErrorAction {
