@@ -5,7 +5,7 @@ export enum UserActionTypes {
 }
 
 export interface IUserState {
-    users: Array<any>,
+    users: any[],
     isLoading: boolean,
     error: null | string
 }

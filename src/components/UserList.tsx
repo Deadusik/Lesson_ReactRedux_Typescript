@@ -1,7 +1,6 @@
 import { useEffect } from 'react'
 import { useTypedSelector } from "../hooks/useTypedSelector"
 import { useActions } from '../hooks/useActions'
-import { fetchUsers } from '../store/action_creators/user'
 
 const UserList: React.FC = () => {
     const { users, error, isLoading } = useTypedSelector(state => state.user)
@@ -23,9 +22,9 @@ const UserList: React.FC = () => {
     return (
         <div>
             {
-                // users.map(user => {
-                //     <div key={user.id}>user.name</div>
-                // })
+                users.map(user => (
+                    <div key={user.id}>{user.name}</div>
+                ))
             }
         </div>
     )
